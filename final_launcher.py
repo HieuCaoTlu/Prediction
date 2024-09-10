@@ -7,7 +7,6 @@ from pyspark.sql import SparkSession
 spark = SparkSession.builder.getOrCreate()
 
 lb1 = widgets.HTML(value='Chọn NAME_CONTRACT_TYPE:')
-lb2 = widgets.HTML(value='Chọn CODE_GENDER:')
 lb3 = widgets.HTML(value='Chọn NAME_EDUCATION_TYPE:')
 lb4 = widgets.HTML(value='Chọn NAME_TYPE_SUITE:')
 lb5 = widgets.HTML(value='Chọn REGION_RATING_CLIENT:')
@@ -23,7 +22,6 @@ lb14 = widgets.HTML(value='Nhập CREDIT_TERM:')
 lb15 = widgets.HTML(value='Đang đợi nhập')
 
 lb1.layout.width = '250px'
-lb2.layout.width = '250px'
 lb3.layout.width = '250px'
 lb4.layout.width = '250px'
 lb5.layout.width = '250px'
@@ -56,7 +54,6 @@ CREDIT_TERM = widgets.FloatText()
 predict_button = widgets.Button(description='Xác nhận')
 
 NAME_CONTRACT_TYPE.layout.width = '200px'
-CODE_GENDER.layout.width = '200px'
 NAME_EDUCATION_TYPE.layout.width = '200px'
 NAME_TYPE_SUITE.layout.width = '200px'
 REGION_RATING_CLIENT.layout.width = '200px'
@@ -75,7 +72,6 @@ def predict(b):
     
     # Lấy giá trị từ các widget
     a = NAME_CONTRACT_TYPE.value
-    b = CODE_GENDER.value
     c = NAME_EDUCATION_TYPE.value
     d = NAME_TYPE_SUITE.value
     e = REGION_RATING_CLIENT.value
@@ -92,7 +88,6 @@ def predict(b):
     # Tạo DataFrame và chạy dự đoán
     newCus = spark.createDataFrame([
         {'NAME_CONTRACT_TYPE':a,
-         'CODE_GENDER':b,
          'NAME_EDUCATION_TYPE':c,
          'NAME_TYPE_SUITE':d,
          'REGION_RATING_CLIENT':e,
@@ -116,7 +111,6 @@ def predict(b):
 predict_button.on_click(predict)
 
 display(widgets.HBox([lb1, NAME_CONTRACT_TYPE]))
-display(widgets.HBox([lb2, CODE_GENDER]))
 display(widgets.HBox([lb3, NAME_EDUCATION_TYPE]))
 display(widgets.HBox([lb4, NAME_TYPE_SUITE]))
 display(widgets.HBox([lb5, REGION_RATING_CLIENT]))
