@@ -105,7 +105,7 @@ def predict(b):
     # Chạy mô hình
     result = loaded_model.transform(newCus).select("probability").first()[0]
     proba_target = result[1]
-    prediction = 'không trả được nợ' if proba_target > 0.24000289501689 else 'trả được nợ'
+    prediction = 'không trả được nợ' if proba_target > 0.200019522474137 else 'trả được nợ'
     print('Mô hình dự đoán: Khách hàng cũ này',prediction,'với tỉ lệ rủi ro là',round(proba_target,3))
     # Cập nhật kết quả
 predict_button.on_click(predict)
