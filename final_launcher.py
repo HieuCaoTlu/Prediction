@@ -107,6 +107,8 @@ def predict(b):
     proba_target = result[1]
     prediction = 'không trả được nợ' if proba_target > 0.200019522474137 else 'trả được nợ'
     print('Mô hình dự đoán: Khách hàng cũ này',prediction,'với tỉ lệ rủi ro là',round(proba_target,3))
+    if proba_target > 0.200019522474137 and proba_target < 0.3:
+        print('Dù vậy, có thể xem xét lại thông tin khác của KH này để cân nhắc cho họ vay')
     # Cập nhật kết quả
 predict_button.on_click(predict)
 
