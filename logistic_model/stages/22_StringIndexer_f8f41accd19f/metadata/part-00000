@@ -1,1 +1,0 @@
-{"class":"org.apache.spark.ml.feature.StringIndexerModel","timestamp":1725931598420,"sparkVersion":"3.5.2","uid":"StringIndexer_f8f41accd19f","paramMap":{"outputCol":"CREDIT_TERM_bucket_index","handleInvalid":"keep","inputCol":"CREDIT_TERM_bucket"},"defaultParamMap":{"outputCol":"StringIndexer_f8f41accd19f__output","handleInvalid":"error","stringOrderType":"frequencyDesc"}}

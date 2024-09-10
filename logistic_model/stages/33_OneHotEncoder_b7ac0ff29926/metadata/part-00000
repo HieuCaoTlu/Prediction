@@ -1,1 +1,0 @@
-{"class":"org.apache.spark.ml.feature.OneHotEncoderModel","timestamp":1725931602797,"sparkVersion":"3.5.2","uid":"OneHotEncoder_b7ac0ff29926","paramMap":{"inputCols":["AMT_GOODS_PRICE_bucket_index"],"handleInvalid":"keep","outputCols":["AMT_GOODS_PRICE_bucket_onehot"]},"defaultParamMap":{"handleInvalid":"error","dropLast":true,"outputCol":"OneHotEncoder_b7ac0ff29926__output"}}

@@ -1,7 +1,7 @@
 import ipywidgets as widgets
 from IPython.display import display
 from pyspark.ml.pipeline import PipelineModel
-loaded_model = PipelineModel.load("./logistic_model")
+loaded_model = PipelineModel.load("./logistic_model_super_final")
 from pyspark.sql import SparkSession
 
 spark = SparkSession.builder.getOrCreate()
